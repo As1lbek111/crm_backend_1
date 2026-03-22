@@ -31,11 +31,11 @@ export class UsersService {
       },
     });
 
-    await this.mailerService.sendEmail(
-      payload.email,
-      payload.email,
-      payload.password,
-    );
+    // await this.mailerService.sendEmail(
+    //   payload.email,
+    //   payload.email,
+    //   payload.password,
+    // );
 
     return {
       success: true,

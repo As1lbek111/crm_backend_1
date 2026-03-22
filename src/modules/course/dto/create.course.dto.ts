@@ -4,6 +4,7 @@ import {
   IsOptional,
   IsEnum,
   IsDecimal,
+  IsNumber,
 } from 'class-validator';
 import { Type } from 'class-transformer';
 import { Status, CourseLevel } from '@prisma/client';
@@ -30,7 +31,7 @@ export class CreateCourseDto {
   level?: CourseLevel;
 
   @ApiProperty()
-  @IsDecimal()
+  @IsNumber()
   price: string;
 
   @ApiProperty()

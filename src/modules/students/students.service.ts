@@ -22,11 +22,11 @@ export class StudentsService {
       },
     });
 
-    await this.mailerService.sendEmail(
-      payload.email,
-      payload.email,
-      payload.password,
-    );
+    // await this.mailerService.sendEmail(
+    //   payload.email,
+    //   payload.email,
+    //   payload.password,
+    // );
 
     return {
       success: true,

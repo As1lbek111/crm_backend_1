@@ -2,10 +2,6 @@ generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
-  provider = "postgresql"
-}
-
 enum CourseLevel {
   BEGINNER
   INTERMEDIATE
@@ -287,4 +283,9 @@ model Rating {
 
   teacher Teacher? @relation(fields: [teacherId], references: [id])
   lesson  Lesson   @relation(fields: [lessonId], references: [id])
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
